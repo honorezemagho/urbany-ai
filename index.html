@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Title if title }}</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+</head>
+<body>
+<div class="container col-md-6">
+    <h1> note sur le chantier </h1>
+    <p> mettez les informations relatifs aux chantiers</p>
+
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          <label class="form-label" for="input-example-1">nom_du_chantier</label>
+          <input class="form-input" type="text" id="nom_du_chantier" placeholder="nom_du_chantier">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="input-example-1">proprietaire</label>
+          <input class="form-input" type="text" id="proprietaire" placeholder="proprietaire">
+        </div>
+
+        <div class="form-group">
+          <select class="form-select">
+            <option>statut</option>
+            <option>Vert</option>
+            <option>Orange</option>
+            <option>Rouge</option>
+          </select>
+        </div>
+
+
+        <div class="form-group">
+  <label class="form-label">permis</label>
+  <label class="form-radio">
+    <input type="radio" name="permis" checked>
+    <i class="form-icon"></i> OUI
+  </label>
+  <label class="form-radio">
+    <input type="radio" name="permis">
+    <i class="form-icon"></i> NON
+  </label>
+</div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-example-3">Message</label>
+          <textarea class="form-input" id="input-example-3" placeholder="Textarea" rows="3"></textarea>
+        </div>
+
+
+
+            {{ form.submit(class="btn btn-primary")}}
+    </form>
+
+</div>
+</body>
+</html>

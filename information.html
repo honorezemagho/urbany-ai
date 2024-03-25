@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Information sur le chantier - Fiche d'inscription</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      font-style: italic;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+<form method="post" action="traitement.php">
+  <h1>Information sur le chantier</h1>
+
+  <label for="nom_du_chantier">Nom du chantier :</label>
+  <input type="text" id="nom_du_chantier" name="nom_du_chantier" required>
+
+  <label for="coordonnees">Coordonnées :</label>
+  <input type="text" id="coordonnees" name="coordonnees" required>
+
+  <label for="proprietaire">Propriétaire :</label>
+  <input type="text" id="proprietaire" name="proprietaire">
+
+  <label for="type">Type :</label>
+  <input type="text" id="type" name="type">
+
+  <label for="commentaire">Commentaire :</label>
+  <textarea id="commentaire" name="commentaire" rows="5" style="width:100%"></textarea>
+
+  <label for="permis">Permis de construire :</label>
+  <input type="checkbox" id="permis" name="permis" value="oui" checked>
+
+  <label for="statut">Statut :</label>
+  <select id="statut" name="statut">
+    <option value="vert">Vert</option>
+    <option value="rouge">Rouge</option>
+    <option value="orange">Orange</option>
+  </select>
+
+  <input type="submit" value="Envoyer">
+</form>
+</body>
+</html>
